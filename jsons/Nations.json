@@ -1,0 +1,51 @@
+[
+    {
+        "name": "The Confederacy",
+        "adjective": [
+            "Confederated"
+        ],
+        "leaderName": "Davy Sullivan",
+        "style": "Corporate",
+        "startBias": [
+            "Avoid Desert",
+            "Tundra"
+        ],
+        "preferredVictoryType": "Diplomatic",
+        "favoredReligion": "Ghost Dance",
+        "declaringWar": "The Confederation from now on consider you an enemy.",
+        "attacked": "Can't we find a mutually beneficial relationship?",
+        "defeated": "The Confederation is now ended my dears, but His spirits will forever remains in our hearts.",
+        //"startIntroPart1": 
+        //"startIntroPart2":
+        "introduction": "Greetings, consider us rapresentatives of the Confederation",
+        "neutralHello": "We always belive in intergovernmental relationships.",
+        "hateHello": "You are not welcome here, beware of your actions.",
+        "tradeRequest": "Our Government is disposed to make an exchange...",
+        "outerColor": [0,90,145],
+        "innerColor": [10,60,31],
+        "uniqueName": "Underground People",
+        "uniques": [
+            "Starts with [Civil Service]",
+            "Starts with [Secrets of the Past]",
+            "[-1 Science] [in all cities] <before discovering [Education]>",
+            "Can spend Gold to annex or puppet a City-State that has been your ally for [10] turns.",
+            "[+1000]% Culture cost of natural border growth [in all cities]", //<before the [Rebuilding Era]>
+            //"[+300]% Culture cost of natural border growth [in all cities] <starting from the [Rebuilding Era]>",
+			"[+500]% Gold cost of acquiring tiles [in this city]",
+            "[-50]% Yield from every [Land]",
+            "Cannot build [Worker] Units"
+            //"[-20]% Yield from every [Land] <starting from the [Rebuilding Era]>"
+        ],
+        "cities": [
+            "North City",
+            "Spinx",
+            "New London",
+            "Arbat Station",
+            "Gravel Beach Harbour",
+            "South Station",
+            "Hard Luck",
+            "Proxima Hub",
+            "Trench-line Outpost"
+        ]
+    }
+]

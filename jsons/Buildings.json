@@ -1,0 +1,433 @@
+[
+    // The Confederacy
+    {
+        "name": "The Old Underground",
+        "isNationalWonder": true,
+        "uniqueTo": "The Confederacy",
+        "replaces":"Bomb Shelter",
+        "cost": 1,
+        "culture": 2,
+        "food":2,
+        "gold":1,
+        "production":3,
+        "science":2,
+        "cityHealth":60,
+        "cityStrength":3,
+        "uniques": [
+            "Indicates the capital city",
+            "Unsellable",
+            "Never destroyed when the city is captured",
+            "Provides [1] [Weapons]",
+            "Free [Gate Guard] appears",
+            "Gain a free [Underground Town] [in this city]",
+            "Gain a free [Metro Deposit] [in this city]"
+        ]
+    },
+    {
+        "name": "Underground Town",
+        "uniqueTo": "The Confederacy",
+        "cost": 80,
+        "cityHealth": 15,
+        "requiredTech": "Civil Service",
+        "uniques": [
+            "Comment [Unlocks Underground Buildings]",
+            "Automatically built in all cities where it is buildable",
+            "Unsellable",
+            "Never destroyed when the city is captured",
+            "[+5]% Production when constructing [Underground] buildings [in this city]",
+            "Gain a free [Metro Station I] [in this city]"
+        ], 
+        "civilopediaText": [
+            {
+                "text": "Traditionally Confederacy towns develops underground. Only upon the stairs over the impressive city gate you can ear the bustling sound of the Hall. - 'Confederacy: Uses and Costumes. An overview' "
+            }
+        ]
+    },
+    // Underground buildings
+    {
+        "name": "Metro Deposit",
+        "cost": 20,
+        "specialistSlots":{"Engineer":2},
+        "uniques":[
+            "Underground",
+            "Consumes [1] [Underground Slot]",
+            "[+5]% Production when constructing [Underground] buildings [in this city]",
+            "Only available <in cities with a [Underground Town]>"
+        ]
+    },
+    {
+        "name": "Underground Farm",
+        "uniqueTo": "The Confederacy",
+        "cost": 70,
+        "food": 1,
+        "specialistSlots": { "Farmer": 2 },
+        "uniques": [
+            "Underground",
+            "Consumes [1] [Underground Slot]",
+            "Provides [1] [Fungus]",
+            "Provides [1] [Hogs]",
+            "Only available <in cities with a [Underground Town]>"
+        ],
+        "maintenance": 1,
+        "hurryCostModifier": 25
+    },
+    {
+        "name": "Underground Plantation",
+        "cost":70,
+        "uniques":[
+            "Underground",
+            "Consumes [2] [Underground Slot]",
+            "Only available <in cities with a [Underground Farm]>",
+            "Provides [1] [Fungus]"
+        ],
+        "requiredTech":"Botany",
+        "hurryCostModifier": 25
+    },
+    {
+        "name": "Mushroom Drying Room",
+        "uniqueTo": "The Confederacy",
+        "cost": 50,
+        "culture":1,
+        "uniques": [
+            "Underground",
+            "Consumes [1] [Underground Slot]",
+            "Consumes [1] [Fungus]",
+            "Provides [1] [Tea Leaves]",
+            "Only available <in cities with a [Underground Farm]>"
+        ],
+        "maintenance": 1,
+        "hurryCostModifier": 25
+    },
+    {
+        "name": "City Congress",
+        "uniqueTo": "The Confederacy",
+        "replaces": "Congress",
+        "cost": 100,
+        "requiredTech": "Civil Service",
+        "uniques": [
+            "Consumes [1] [Underground Slot]",
+            "[+1 Culture] per [4] population [in this city]",
+            "[-10]% Unhappiness from [Population] [in this city]",
+            "[-20]% Culture cost of natural border growth [in this city]",
+            "Only available <if [Search for Survivors] is constructed>",
+            "Destroyed when the city is captured"
+        ],
+        "maintenance":2
+    },
+    {
+        "name": "War Meeting Room",
+        "uniqueTo": "The Confederacy",
+        "replaces": "Council",
+        "cost": 20,
+        "requiredTech": "Civil Service",
+        "uniques": [
+            "Can only be built <in [in capital] cities>",
+            "Only available <in cities with a [Congress]>",
+            "Only available <when at war>",
+            "[+15]% Production when constructing [All] units [in all cities]<when at war>",
+            "[-10]% [Culture] [in all cities]<when at war>",
+            "[-5]% Production when constructing [All] buildings [in all cities]<when at war>",
+            "Destroyed when the city is captured"
+        ],
+        "maintenance":3
+    },
+    {
+        "name":"Reactivating the railing systems",
+        "cost":120,
+        "isNationalWonder":true,
+        "uniques":[
+            "Provides [1] [Metro Railing]",
+            "Only available <in cities with a [Underground Town]>",
+            "Gain a free [Internal Railings] [in this city]",
+            "[-50]% production cost <after discovering [Railroads]>"
+        ],
+        "requiredTech":"Engineering"
+    },
+    {
+        "name":"Internal Railings",
+        "cost":70,
+        "requiredTech":"Engineering",
+        "uniques":[
+            "[+5]% [Production] [in this city]",
+            "[+5]% [Production] [in this city] <with [Power]>",
+            "[+1 Happiness, +3 Culture] [in this city] <with [Power]>",
+            "Only available <with [Metro Railing]>"
+        ]
+    },
+    // Metro station
+    {
+        "name":"Metro Station I",
+        "cost":100,
+        "cityHealth":5,
+        "cityStrength":2,
+        "uniques":[
+            "Underground",
+            "[+30]% Culture cost of natural border growth [in this city]",
+            "[+30]% Gold cost of acquiring tiles [in this city]",
+            "Provides [2] [Underground Slot]",
+            "Provides [1] [Underground Slot] <with [20]% chance>",
+            "Provides [1] [Underground Slot] <with [5]% chance>",
+            "Provides [1] [Flooded Area] <with [10]% chance>",
+            "Provides [1] [Station Access]",
+            "Provides [1] [Station Access] <with [40]% chance>",
+            "Provides [1] [Station Access] <with [10]% chance>"
+        ],
+        "civilopediaText":[
+            {
+                "text": "An old station, rearranged to holds facilities and homes for the expanding city."
+            }
+        ]
+    },
+    {
+        "name":"Metro Station II",
+        "cost":100,
+        "cityHealth":5,
+        "cityStrength":2,
+        "uniques":[
+            "Underground",
+            "Unsellable",
+            "Never destroyed when the city is captured",
+            "[+10]% Unhappiness from [Population] [in this city]",
+            "[+30]% Culture cost of natural border growth [in this city]",
+            "[+30]% Gold cost of acquiring tiles [in this city]",
+            "Provides [2] [Underground Slot]",
+            "Provides [1] [Underground Slot] <with [20]% chance>",
+            "Provides [1] [Underground Slot] <with [5]% chance>",
+            "Provides [1] [Flooded Area] <with [10]% chance>",
+            "Only available <with [Station Access]>",
+            "Consumes [1] [Station Access]",
+            "Provides [1] [Station Access]",
+            "Provides [1] [Station Access] <with [30]% chance>",
+            "Provides [1] [Station Access] <with [10]% chance>"
+        ],
+        "civilopediaText":[
+            {
+                "text": "An old station, rearranged to holds facilities and homes for the expanding city."
+            }
+        ]
+    },
+    {
+        "name":"Metro Station III",
+        "cost":100,
+        "cityHealth":5,
+        "cityStrength":2,
+        "uniques":[
+            "Underground",
+            "Unsellable",
+            "Never destroyed when the city is captured",
+            "[+10]% Unhappiness from [Population] [in this city]",
+            "[+30]% Culture cost of natural border growth [in this city]",
+            "[+30]% Gold cost of acquiring tiles [in this city]",
+            "Provides [2] [Underground Slot]",
+            "Provides [1] [Underground Slot] <with [20]% chance>",
+            "Provides [1] [Underground Slot] <with [5]% chance>",
+            "Provides [1] [Flooded Area] <with [10]% chance>",
+            "Only available <with [Station Access]>",
+            "Only available <in cities with a [Metro Station II]>",
+            "Consumes [1] [Station Access]",
+            "Provides [1] [Station Access]",
+            "Provides [1] [Station Access] <with [30]% chance>",
+            "Provides [1] [Station Access] <with [10]% chance>"
+        ],
+        "civilopediaText":[
+            {
+                "text": "An old station, rearranged to holds facilities and homes for the expanding city."
+            }
+        ]
+    },
+    {
+        "name":"Metro Station IV",
+        "cost":100,
+        "cityHealth":5,
+        "cityStrength":2,
+        "uniques":[
+            "Underground",
+            "Unsellable",
+            "Never destroyed when the city is captured",
+            "[+10]% Unhappiness from [Population] [in this city]",
+            "[+30]% Culture cost of natural border growth [in this city]",
+            "[+30]% Gold cost of acquiring tiles [in this city]",
+            "Provides [2] [Underground Slot]",
+            "Provides [1] [Underground Slot] <with [20]% chance>",
+            "Provides [1] [Underground Slot] <with [5]% chance>",
+            "Provides [1] [Flooded Area] <with [10]% chance>",
+            "Only available <with [Station Access]>",
+            "Only available <in cities with a [Metro Station III]>",
+            "Consumes [1] [Station Access]",
+            "Provides [1] [Station Access]",
+            "Provides [1] [Station Access] <with [30]% chance>",
+            "Provides [1] [Station Access] <with [10]% chance>"
+        ],
+        "civilopediaText":[
+            {
+                "text": "An old station, rearranged to holds facilities and homes for the expanding city."
+            }
+        ]
+    },
+    {
+        "name":"Metro Station V",
+        "cost":100,
+        "cityHealth":5,
+        "cityStrength":2,
+        "uniques":[
+            "Underground",
+            "Unsellable",
+            "Never destroyed when the city is captured",
+            "[+10]% Unhappiness from [Population] [in this city]",
+            "[+30]% Culture cost of natural border growth [in this city]",
+            "[+30]% Gold cost of acquiring tiles [in this city]",
+            "Provides [2] [Underground Slot]",
+            "Provides [1] [Underground Slot] <with [20]% chance>",
+            "Provides [1] [Underground Slot] <with [5]% chance>",
+            "Provides [1] [Flooded Area] <with [10]% chance>",
+            "Only available <with [Station Access]>",
+            "Only available <in cities with a [Metro Station IV]>",
+            "Consumes [1] [Station Access]",
+            "Provides [1] [Station Access] <with [30]% chance>",
+            "Provides [1] [Station Access] <with [10]% chance>"
+        ],
+        "civilopediaText":[
+            {
+                "text": "An old station, rearranged to holds facilities and homes for the expanding city."
+            }
+        ]
+    },
+    {
+        "name":"Metro Station VI",
+        "cost":100,
+        "cityHealth":5,
+        "cityStrength":2,
+        "uniques":[
+            "Underground",
+            "Unsellable",
+            "Never destroyed when the city is captured",
+            "[+10]% Unhappiness from [Population] [in this city]",
+            "[+30]% Culture cost of natural border growth [in this city]",
+            "[+30]% Gold cost of acquiring tiles [in this city]",
+            "Provides [2] [Underground Slot]",
+            "Provides [1] [Underground Slot] <with [20]% chance>",
+            "Provides [1] [Underground Slot] <with [5]% chance>",
+            "Provides [1] [Flooded Area] <with [10]% chance>",
+            "Only available <with [Station Access]>",
+            "Only available <in cities with a [Metro Station V]>",
+            "Consumes [1] [Station Access]",
+            "Provides [1] [Station Access] <with [30]% chance>",
+            "Provides [1] [Station Access] <with [10]% chance>"
+        ],
+        "civilopediaText":[
+            {
+                "text": "An old station, rearranged to holds facilities and homes for the expanding city."
+            }
+        ]
+    },
+    {
+        "name":"Metro Station VII",
+        "cost":100,
+        "cityHealth":5,
+        "cityStrength":2,
+        "uniques":[
+            "Underground",
+            "Unsellable",
+            "Never destroyed when the city is captured",
+            "[+10]% Unhappiness from [Population] [in this city]",
+            "[+30]% Culture cost of natural border growth [in this city]",
+            "[+30]% Gold cost of acquiring tiles [in this city]",
+            "Provides [2] [Underground Slot]",
+            "Provides [1] [Underground Slot] <with [20]% chance>",
+            "Provides [1] [Underground Slot] <with [5]% chance>",
+            "Provides [1] [Flooded Area] <with [10]% chance>",
+            "Only available <with [Station Access]>",
+            "Only available <in cities with a [Metro Station VI]>",
+            "Consumes [1] [Station Access]",
+            "Provides [1] [Station Access] <with [30]% chance>",
+            "Provides [1] [Station Access] <with [10]% chance>"
+        ],
+        "civilopediaText":[
+            {
+                "text": "An old station, rearranged to holds facilities and homes for the expanding city."
+            }
+        ]
+    },
+    {
+        "name":"Metro Station VIII",
+        "cost":100,
+        "cityHealth":5,
+        "cityStrength":2,
+        "uniques":[
+            "Underground",
+            "Unsellable",
+            "Never destroyed when the city is captured",
+            "[+10]% Unhappiness from [Population] [in this city]",
+            "[+30]% Culture cost of natural border growth [in this city]",
+            "[+30]% Gold cost of acquiring tiles [in this city]",
+            "Provides [2] [Underground Slot]",
+            "Provides [1] [Underground Slot] <with [20]% chance>",
+            "Provides [1] [Underground Slot] <with [5]% chance>",
+            "Provides [1] [Flooded Area] <with [10]% chance>",
+            "Only available <with [Station Access]>",
+            "Only available <in cities with a [Metro Station VII]>",
+            "Consumes [1] [Station Access]",
+            "Provides [1] [Station Access] <with [30]% chance>",
+            "Provides [1] [Station Access] <with [10]% chance>"
+        ],
+        "civilopediaText":[
+            {
+                "text": "An old station, rearranged to holds facilities and homes for the expanding city."
+            }
+        ]
+    },
+    {
+        "name":"Metro Station IX",
+        "cost":100,
+        "cityHealth":5,
+        "cityStrength":2,
+        "uniques":[
+            "Underground",
+            "Unsellable",
+            "Never destroyed when the city is captured",
+            "[+10]% Unhappiness from [Population] [in this city]",
+            "[+30]% Culture cost of natural border growth [in this city]",
+            "[+30]% Gold cost of acquiring tiles [in this city]",
+            "Provides [2] [Underground Slot]",
+            "Provides [1] [Underground Slot] <with [20]% chance>",
+            "Provides [1] [Underground Slot] <with [5]% chance>",
+            "Provides [1] [Flooded Area] <with [10]% chance>",
+            "Only available <with [Station Access]>",
+            "Only available <in cities with a [Metro Station VIII]>",
+            "Consumes [1] [Station Access]",
+            "Provides [1] [Station Access] <with [30]% chance>",
+            "Provides [1] [Station Access] <with [10]% chance>"
+        ],
+        "civilopediaText":[
+            {
+                "text": "An old station, rearranged to holds facilities and homes for the expanding city."
+            }
+        ]
+    },
+    {
+        "name":"Metro Station X",
+        "cost":100,
+        "cityHealth":5,
+        "cityStrength":2,
+        "uniques":[
+            "Underground",
+            "[+30]% Culture cost of natural border growth [in this city]",
+            "[+30]% Gold cost of acquiring tiles [in this city]",
+            "Provides [2] [Underground Slot]",
+            "Provides [1] [Underground Slot] <with [20]% chance>",
+            "Provides [1] [Underground Slot] <with [5]% chance>",
+            "Provides [1] [Flooded Area] <with [10]% chance>",
+            "Only available <with [Station Access]>",
+            "Only available <in cities with a [Metro Station IX]>",
+            "Consumes [1] [Station Access]"
+            /*"Provides [1] [Station Access]",
+            "Provides [1] [Station Access] <with [40]% chance>",
+            "Provides [1] [Station Access] <with [10]% chance>"*/
+        ],
+        "civilopediaText":[
+            {
+                "text": "An old station, rearranged to holds facilities and homes for the expanding city."
+            }
+        ]
+    }
+]

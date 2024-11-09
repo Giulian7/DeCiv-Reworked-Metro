@@ -1,0 +1,34 @@
+[
+	{
+		"name":"Gate Guard",
+		"uniqueTo":"The Confederacy",
+		"replaces": "Militia",
+		"unitType":"Scrapper",
+		"movement":2,
+		"cost":45,
+		"strength":30,
+		"promotions":[
+			"Urban Warfare I",
+			"Urban Warfare II",
+			"Pride"
+		],
+		"uniques":[
+			"Personnel"
+		]
+	},
+	{
+		"name":"Trail Blazer",
+		"uniqueTo":"The Confederacy",
+		"unitType":"Scout",
+		"replaces":"Scout",
+		"movement":2,
+		"cost":45,
+		"strength":10,
+		"promotions":[
+			"Reconnaissance I"
+		],
+		"uniques":[
+			"Personnel"
+		]
+	}
+] 

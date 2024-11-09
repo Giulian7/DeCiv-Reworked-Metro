@@ -1,0 +1,51 @@
+[
+    {
+        "name": "Underground",
+        "resourceType":"Bonus",
+        "terrainsCanBeFoundOn":[
+            "Jungle",
+            "Forest"
+        ],
+        "production":1,
+        "improvedBy":["City center"],
+        "improvementStats": { "production": 1 , "food": 1},
+        "uniques":[
+            "City-level resource"
+        ]
+    },
+    {
+        "name":"Underground Slot",
+        "resourceType":"Bonus",
+        "uniques":[
+            "City-level resource",
+            "Doesn't generate naturally"
+        ]
+    },
+    {
+        "name":"Station Access",
+        "resourceType":"Bonus",
+        "uniques":[
+            "City-level resource",
+            "Doesn't generate naturally"
+        ]
+    },
+    {
+        "name": "Flooded Area",
+        "resourceType":"Bonus",
+        "gold":2,
+        "uniques":[
+            "City-level resource",
+            "Doesn't generate naturally"
+        ]
+    },
+    // Special Resources
+    {
+        "name":"Metro Railing",
+        "resourceType": "Bonus",
+        "uniques":[
+            "Doesn't generate naturally",
+            "Knowledge Mark",
+            "[+50]% [Science] <while discovering [Railroads]>"
+        ]
+    }
+]
