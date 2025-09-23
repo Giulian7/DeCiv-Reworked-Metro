@@ -11,9 +11,16 @@ BuildingIcons/City Congress
   orig: 100, 100
   offset: 0, 0
   index: -1
+BuildingIcons/Metro Deposit
+  rotate: false
+  xy: 1212, 1474
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
 BuildingIcons/The Old Underground
   rotate: false
-  xy: 4, 4
+  xy: 308, 316
   size: 83, 100
   orig: 83, 100
   offset: 0, 0
@@ -34,7 +41,7 @@ BuildingIcons/War Meeting Room
   index: -1
 ImprovementIcons/City center-The Confederacy
   rotate: false
-  xy: 112, 211
+  xy: 416, 523
   size: 1, 1
   orig: 1, 1
   offset: 0, 0
@@ -46,9 +53,16 @@ NationIcons/The Confederacy
   orig: 296, 304
   offset: 0, 0
   index: -1
-ResourceIcons/Underground
+ResourceIcons/Station Access
   rotate: false
   xy: 1370, 1632
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+ResourceIcons/Underground
+  rotate: false
+  xy: 112, 112
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
@@ -62,7 +76,7 @@ UnitIcons/Gate Guard
   index: -1
 UnitIcons/Trail Blazer
   rotate: false
-  xy: 1212, 1474
+  xy: 4, 4
   size: 100, 100
   orig: 100, 100
   offset: 0, 0

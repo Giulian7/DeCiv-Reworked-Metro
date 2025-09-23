@@ -22,6 +22,14 @@
         ]
     },
     {
+        "name": "Abandoned Metro Station",
+        "resourceType":"Bonus",
+        "uniques":[
+            "City-level resource",
+            "Doesn't generate naturally"
+        ]
+    },
+    {
         "name":"Station Access",
         "resourceType":"Bonus",
         "uniques":[
@@ -45,7 +53,7 @@
         "uniques":[
             "Doesn't generate naturally",
             "Knowledge Mark",
-            "[+50]% [Science] <while discovering [Railroads]>"
+            "[+50]% [Science] <while researching [Railroads]>"
         ]
     }
 ]

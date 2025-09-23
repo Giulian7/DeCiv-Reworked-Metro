@@ -10,6 +10,7 @@
             "Avoid Desert",
             "Tundra"
         ],
+        "personality":"The Confederacy",
         "preferredVictoryType": "Diplomatic",
         "favoredReligion": "Ghost Dance",
         "declaringWar": "The Confederation from now on consider you an enemy.",
@@ -28,13 +29,11 @@
             "Starts with [Civil Service]",
             "Starts with [Secrets of the Past]",
             "[-1 Science] [in all cities] <before discovering [Education]>",
-            "Can spend Gold to annex or puppet a City-State that has been your ally for [10] turns.",
-            "[+1000]% Culture cost of natural border growth [in all cities]", //<before the [Rebuilding Era]>
-            //"[+300]% Culture cost of natural border growth [in all cities] <starting from the [Rebuilding Era]>",
+            "Can spend Gold to annex or puppet a City-State that has been your Ally for [10] turns",
+            "[+1000]% Culture cost of natural border growth [in all cities]",
 			"[+500]% Gold cost of acquiring tiles [in this city]",
-            "[-50]% Yield from every [Land]",
-            "Cannot build [Worker] Units"
-            //"[-20]% Yield from every [Land] <starting from the [Rebuilding Era]>"
+            "[-75]% Yield from every [Land]",
+            "[-75]% Production when constructing [Melee] units [in all cities] <for [50] turns>"
         ],
         "cities": [
             "North City",

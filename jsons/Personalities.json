@@ -1,0 +1,33 @@
+[
+    {
+		"name": "The Confederacy",
+		"production": 8,
+		"food": 6,
+		"gold": 7,
+		"science": 7,
+		"culture": 8,
+		"happiness": 5,
+		"faith": 2,
+		"military": 6,
+		"aggressive": 2,
+		"declareWar": 2,
+		"commerce": 8,
+		"diplomacy": 8,
+		"loyal": 8,
+		"expansion": 2,
+		"priorities": {
+			"Adaptation": 30,
+			"Expansionism": 0,
+			"Sovereignty": 0,
+			"Theocracy": 0,
+			"Rationalism": 20,
+			"Constitution": 30,
+			"Supremacy": 20,
+			"Monopoly": 10,
+			"Collectivism": 30,
+			"Naturalism": 0,
+			"Mechanization": 10,
+			"Bionics": 0
+		}
+	}
+]
