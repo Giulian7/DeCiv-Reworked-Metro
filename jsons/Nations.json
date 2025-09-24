@@ -28,12 +28,16 @@
         "uniques": [
             "Starts with [Civil Service]",
             "Starts with [Secrets of the Past]",
-            "[-1 Science] [in all cities] <before discovering [Education]>",
+            "[-75]% [Science]<while researching [Redomestication]>",
+            "[+2 Science] [in all cities] <before the [Rediscovering era]>",
             "Can spend Gold to annex or puppet a City-State that has been your Ally for [10] turns",
             "[+1000]% Culture cost of natural border growth [in all cities]",
-			"[+500]% Gold cost of acquiring tiles [in this city]",
+			"[+500]% Gold cost of acquiring tiles [in all cities]",
+            "[-99]% Production when constructing [non-[Underground]] buildings [in all cities]<in cities without a [Upper Town]>",
             "[-75]% Yield from every [Land]",
-            "[-75]% Production when constructing [Melee] units [in all cities] <for [50] turns>"
+            "[-75]% Yield from every [Water]",
+            "[-75]% Production when constructing [Melee] units [in all cities] <for [50] turns>",
+            "Cannot build [Worker] units"
         ],
         "cities": [
             "North City",

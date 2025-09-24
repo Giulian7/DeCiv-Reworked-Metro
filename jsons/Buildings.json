@@ -24,24 +24,29 @@
         ]
     },
     {
+        "name":"Upper Town",
+        "uniqueTo": "The Confederacy",
+        "uniques":[
+            "Unbuildable",
+            "Automatically built in all cities where it is buildable"
+        ]
+    },
+    {
         "name": "Underground Town",
         "uniqueTo": "The Confederacy",
-        "cost": 80,
         "cityHealth": 15,
-        "requiredTech": "Civil Service",
         "requiredNearbyImprovedResources":[
             "Underground"
         ],
         "uniques": [
-            "Comment [Unlocks Underground Buildings]",
-            "Automatically built in all cities where it is buildable",
+            "Unbuildable",
             "Unsellable",
+            "Automatically built in all cities where it is buildable",
+            "Comment [Unlocks Underground Buildings]",
             "Never destroyed when the city is captured",
             "[+5]% Production when constructing [Underground] buildings [in this city]",
-            "Provides [10] [Abandoned Metro Station]"
-            /*"Instantly provides [3] [Abandoned Metro Station]<with [30]% chance>",
-            "Instantly provides [2] [Abandoned Metro Station]<with [10]% chance>",
-            "Instantly provides [2] [Abandoned Metro Station]<with [5]% chance>"*/
+            "Provides [10] [Abandoned Metro Station]<in this city>",
+            "Gain a free [Metro Station I] [in this city]"
         ], 
         "civilopediaText": [
             {
@@ -66,19 +71,51 @@
         "uniqueTo":"The Confederacy",
         "cost": 70,
         "specialistSlots": {"Worker":1,"Engineer":2},
+        "production":1,
         "uniques":[
             "Underground",
-            "Provides [2] [Power]"
+            "Consumes [1] [Underground Slot]",
+            "Provides [2] [Power]",
+            "Provides [1] [Power]<when number of [[Fungus] - 1] is more than [-1]><when number of [[Oil] - 1] is less than [0]>",
+            "Consumes [1] [Fungus]<when number of [[Fungus] - 1] is more than [-1]><when number of [[Oil] - 1] is less than [0]>",
+            "Provides [1] [Power]<when number of [[Oil] - 1] is more than [-1]>",
+            "Consumes [1] [Oil]<when number of [[Oil] - 1] is more than [-1]>"
         ],
         "maintenance":1,
-        "requiredTech":"Engineering"
+        "requiredTech":"Machinery",
+        "hurryCostModifier":25
     },
     {
-        "name": "Scavenger hideout",
+        "name": "Power Station",
+        "uniqueTo":"The Confederacy",
+        "cost":100,
+        "specialistSlots":{"Worker":2,"Engineer":3},
+        "replaces":"Power Room",
+        "production":1,
+        "uniques":[
+            "Underground",
+            "Consumes [2] [Underground Slot]",
+            "Provides [3] [Power]",
+            "Provides [1] [Power]<when number of [[Fungus] - 1] is more than [0]><when number of [[Oil] - 1] is less than [0]>",
+            "Consumes [1] [Fungus]<when number of [[Fungus] - 1] is more than [0]><when number of [[Oil] - 1] is less than [0]>",
+            "Provides [2] [Power]<when number of [[Oil] - 1] is more than [0]>",
+            "Consumes [1] [Oil]<when number of [[Oil] - 1] is more than [0]>"
+        ],
+        "maintenance":2,
+        "requiredTech":"Steam Power",
+        "hurryCostModifier":25
+    },
+    {
+        "name": "Scavenger's Hideout",
         "uniqueTo":"The Confederacy",
         "cost": 70,
         "specialistSlots":{"Worker":1},
         "uniques":[
+            "Underground",
+            "Consumes [1] [Underground Slot]",
+            "[+20]% Production when constructing [Scout] units [in this city]",
+            "[+5]% Production when constructing [Land] units [in this city]",
+            "[-30]% Culture cost of natural border growth [in this city]"
         ]
     },
     {
@@ -117,7 +154,8 @@
         "uniques":[
             "Underground",
             "Consumes [2] [Underground Slot]",
-            "Provides [3] [Fungus]"
+            "Provides [3] [Fungus]",
+            "Provides [1] [Fungus]"
         ],
         "requiredTech":"Botany",
         "hurryCostModifier": 25
@@ -127,6 +165,7 @@
         "uniqueTo": "The Confederacy",
         "cost": 50,
         "culture":1,
+        "food":1,
         "specialistSlots": {"Botanist": 1},
         "uniques": [
             "Underground",
@@ -151,6 +190,7 @@
         "cost": 100,
         "requiredTech": "Civil Service",
         "uniques": [
+            "Underground",
             "Consumes [1] [Underground Slot]",
             "Only available <in cities with a [Town Hall]>",
             "[+1 Culture] per [4] population [in this city]",
@@ -168,6 +208,7 @@
         "cost": 20,
         "requiredTech": "Civil Service",
         "uniques": [
+            "Underground",
             "Can only be built <in [in capital] cities>",
             "Only available <in cities with a [Congress]>",
             "Only available <when at war>",
@@ -183,11 +224,12 @@
         "cost":120,
         "isNationalWonder":true,
         "uniques":[
+            "Underground",
             "Provides [1] [Metro Railing]",
             "Only available <in cities with a [Underground Town]>",
             "Only available <in cities with a [Metro Station III]>",
             "Gain a free [Internal Railings] [in this city]",
-            "[-50]% production cost <after discovering [Railroads]>",
+            "[-50]% production cost <after discovering [Railroads]>"
         ],
         "requiredTech":"Engineering"
     },
@@ -196,6 +238,7 @@
         "cost":70,
         "requiredTech":"Engineering",
         "uniques":[
+            "Underground",
             "Consumes [1] [Power]",
             "[+5]% [Production] [in this city]",
             "[+5]% [Production] [in this city] <with [Power]>",
@@ -206,19 +249,14 @@
     // Metro station
     {
         "name":"Metro Station I",
-        "cost":100,
         "cityHealth":5,
         "cityStrength":2,
         "uniques":[
+            "Unbuildable",
             "Underground",
+            "Unsellable",
             "Consumes [1] [Abandoned Metro Station]",
-            "Provides [2] [Underground Slot]",
-            //"Provides [1] [Underground Slot] <with [20]% chance><upon constructing [buildingFilter]>",
-            //"Provides [1] [Underground Slot] <with [5]% chance>",
-            //"Provides [1] [Flooded Area] <with [10]% chance>",
-            "Provides [1] [Station Access]",
-            "Provides [1] [Station Access] <with [30]% chance>",
-            "Provides [1] [Station Access] <with [10]% chance>"
+            "Provides [2] [Underground Slot]"
         ],
         "civilopediaText":[
             {
@@ -226,22 +264,6 @@
             }
         ]
     },
-    /*{
-        "name": "Settle Metro Station",
-        "cost": 2,
-        "uniques":[
-            "Consumes [1] [Abandoned Metro Station]",
-            "Instantly provides [1] [Metro Station]",
-            "Instantly provides [2] [Underground Slot]",
-            "Instantly provides [1] [Underground Slot] <with [20]% chance>",
-            "Instantly provides [1] [Underground Slot] <with [5]% chance>",
-            "Instantly provides [1] [Flooded Area] <with [10]% chance>",
-            "Instantly provides [1] [Station Access]",
-            "Instantly provides [1] [Station Access] <with [30]% chance>",
-            "Instantly provides [1] [Station Access] <with [10]% chance>",
-            "Remove [Settle Metro Station] [in this city]"
-        ]
-    },*/
     {
         "name":"Metro Station II",
         "cost":100,
@@ -252,18 +274,11 @@
             "Unsellable",
             "Only available <in cities with a [Metro Station I]>",
             "Only available <with [Abandoned Metro Station]>",
-            "Never destroyed when the city is captured",
-            "[+10]% Unhappiness from [Population] [in this city]",
+            "Destroyed when the city is captured",
+            "[+5]% Unhappiness from [Population] [in this city]",
             "[+30]% Culture cost of natural border growth [in this city]",
             "[+30]% Gold cost of acquiring tiles [in this city]",
             "Provides [2] [Underground Slot]",
-            /*"Provides [1] [Underground Slot] <with [20]% chance>",
-            "Provides [1] [Underground Slot] <with [5]% chance>",
-            "Provides [1] [Flooded Area] <with [10]% chance>",
-            "Only available <with [Station Access]>",
-            "Provides [1] [Station Access]",
-            "Provides [1] [Station Access] <with [30]% chance>",
-            "Provides [1] [Station Access] <with [10]% chance>",*/
             "Consumes [1] [Abandoned Metro Station]"
         ],
         "civilopediaText":[
@@ -275,25 +290,18 @@
     {
         "name":"Metro Station III",
         "cost":100,
-        "cityHealth":5,
+        "cityHealth":8,
         "cityStrength":2,
         "uniques":[
             "Underground",
             "Unsellable",
             "Only available <in cities with a [Metro Station II]>",
             "Only available <with [Abandoned Metro Station]>",
-            "Never destroyed when the city is captured",
+            "Destroyed when the city is captured",
             "[+10]% Unhappiness from [Population] [in this city]",
             "[+30]% Culture cost of natural border growth [in this city]",
             "[+30]% Gold cost of acquiring tiles [in this city]",
             "Provides [2] [Underground Slot]",
-            /*"Provides [1] [Underground Slot] <with [20]% chance>",
-            "Provides [1] [Underground Slot] <with [5]% chance>",
-            "Provides [1] [Flooded Area] <with [10]% chance>",
-            "Only available <with [Station Access]>",
-            "Provides [1] [Station Access]",
-            "Provides [1] [Station Access] <with [30]% chance>",
-            "Provides [1] [Station Access] <with [10]% chance>",*/
             "Consumes [1] [Abandoned Metro Station]"
         ],
         "civilopediaText":[
@@ -305,25 +313,18 @@
     {
         "name":"Metro Station IV",
         "cost":100,
-        "cityHealth":5,
+        "cityHealth":8,
         "cityStrength":2,
         "uniques":[
             "Underground",
             "Unsellable",
             "Only available <in cities with a [Metro Station III]>",
             "Only available <with [Abandoned Metro Station]>",
-            "Never destroyed when the city is captured",
+            "Destroyed when the city is captured",
             "[+10]% Unhappiness from [Population] [in this city]",
             "[+30]% Culture cost of natural border growth [in this city]",
             "[+30]% Gold cost of acquiring tiles [in this city]",
             "Provides [2] [Underground Slot]",
-            /*"Provides [1] [Underground Slot] <with [20]% chance>",
-            "Provides [1] [Underground Slot] <with [5]% chance>",
-            "Provides [1] [Flooded Area] <with [10]% chance>",
-            "Only available <with [Station Access]>",
-            "Provides [1] [Station Access]",
-            "Provides [1] [Station Access] <with [30]% chance>",
-            "Provides [1] [Station Access] <with [10]% chance>",*/
             "Consumes [1] [Abandoned Metro Station]"
         ],
         "civilopediaText":[
@@ -335,25 +336,18 @@
     {
         "name":"Metro Station V",
         "cost":100,
-        "cityHealth":5,
+        "cityHealth":10,
         "cityStrength":2,
         "uniques":[
             "Underground",
             "Unsellable",
             "Only available <in cities with a [Metro Station IV]>",
             "Only available <with [Abandoned Metro Station]>",
-            "Never destroyed when the city is captured",
+            "Destroyed when the city is captured",
             "[+10]% Unhappiness from [Population] [in this city]",
             "[+30]% Culture cost of natural border growth [in this city]",
             "[+30]% Gold cost of acquiring tiles [in this city]",
             "Provides [2] [Underground Slot]",
-            /*"Provides [1] [Underground Slot] <with [20]% chance>",
-            "Provides [1] [Underground Slot] <with [5]% chance>",
-            "Provides [1] [Flooded Area] <with [10]% chance>",
-            "Only available <with [Station Access]>",
-            "Provides [1] [Station Access]",
-            "Provides [1] [Station Access] <with [30]% chance>",
-            "Provides [1] [Station Access] <with [10]% chance>",*/
             "Consumes [1] [Abandoned Metro Station]"
         ],
         "civilopediaText":[
@@ -365,25 +359,18 @@
     {
         "name":"Metro Station VI",
         "cost":100,
-        "cityHealth":5,
+        "cityHealth":10,
         "cityStrength":2,
         "uniques":[
             "Underground",
             "Unsellable",
             "Only available <in cities with a [Metro Station V]>",
             "Only available <with [Abandoned Metro Station]>",
-            "Never destroyed when the city is captured",
+            "Destroyed when the city is captured",
             "[+10]% Unhappiness from [Population] [in this city]",
             "[+30]% Culture cost of natural border growth [in this city]",
             "[+30]% Gold cost of acquiring tiles [in this city]",
             "Provides [2] [Underground Slot]",
-            /*"Provides [1] [Underground Slot] <with [20]% chance>",
-            "Provides [1] [Underground Slot] <with [5]% chance>",
-            "Provides [1] [Flooded Area] <with [10]% chance>",
-            "Only available <with [Station Access]>",
-            "Provides [1] [Station Access]",
-            "Provides [1] [Station Access] <with [30]% chance>",
-            "Provides [1] [Station Access] <with [10]% chance>",*/
             "Consumes [1] [Abandoned Metro Station]"
         ],
         "civilopediaText":[
@@ -395,25 +382,18 @@
     {
         "name":"Metro Station VII",
         "cost":100,
-        "cityHealth":5,
+        "cityHealth":12,
         "cityStrength":2,
         "uniques":[
             "Underground",
             "Unsellable",
             "Only available <in cities with a [Metro Station VI]>",
             "Only available <with [Abandoned Metro Station]>",
-            "Never destroyed when the city is captured",
+            "Destroyed when the city is captured",
             "[+10]% Unhappiness from [Population] [in this city]",
             "[+30]% Culture cost of natural border growth [in this city]",
             "[+30]% Gold cost of acquiring tiles [in this city]",
             "Provides [2] [Underground Slot]",
-            /*"Provides [1] [Underground Slot] <with [20]% chance>",
-            "Provides [1] [Underground Slot] <with [5]% chance>",
-            "Provides [1] [Flooded Area] <with [10]% chance>",
-            "Only available <with [Station Access]>",
-            "Provides [1] [Station Access]",
-            "Provides [1] [Station Access] <with [30]% chance>",
-            "Provides [1] [Station Access] <with [10]% chance>",*/
             "Consumes [1] [Abandoned Metro Station]"
         ],
         "civilopediaText":[
@@ -425,25 +405,18 @@
     {
         "name":"Metro Station VIII",
         "cost":100,
-        "cityHealth":5,
+        "cityHealth":12,
         "cityStrength":2,
         "uniques":[
             "Underground",
             "Unsellable",
             "Only available <in cities with a [Metro Station VII]>",
             "Only available <with [Abandoned Metro Station]>",
-            "Never destroyed when the city is captured",
+            "Destroyed when the city is captured",
             "[+10]% Unhappiness from [Population] [in this city]",
             "[+30]% Culture cost of natural border growth [in this city]",
             "[+30]% Gold cost of acquiring tiles [in this city]",
             "Provides [2] [Underground Slot]",
-            /*"Provides [1] [Underground Slot] <with [20]% chance>",
-            "Provides [1] [Underground Slot] <with [5]% chance>",
-            "Provides [1] [Flooded Area] <with [10]% chance>",
-            "Only available <with [Station Access]>",
-            "Provides [1] [Station Access]",
-            "Provides [1] [Station Access] <with [30]% chance>",
-            "Provides [1] [Station Access] <with [10]% chance>",*/
             "Consumes [1] [Abandoned Metro Station]"
         ],
         "civilopediaText":[
@@ -455,25 +428,18 @@
     {
         "name":"Metro Station IX",
         "cost":100,
-        "cityHealth":5,
+        "cityHealth":15,
         "cityStrength":2,
         "uniques":[
             "Underground",
             "Unsellable",
             "Only available <in cities with a [Metro Station VIII]>",
             "Only available <with [Abandoned Metro Station]>",
-            "Never destroyed when the city is captured",
+            "Destroyed when the city is captured",
             "[+10]% Unhappiness from [Population] [in this city]",
             "[+30]% Culture cost of natural border growth [in this city]",
             "[+30]% Gold cost of acquiring tiles [in this city]",
             "Provides [2] [Underground Slot]",
-            /*"Provides [1] [Underground Slot] <with [20]% chance>",
-            "Provides [1] [Underground Slot] <with [5]% chance>",
-            "Provides [1] [Flooded Area] <with [10]% chance>",
-            "Only available <with [Station Access]>",
-            "Provides [1] [Station Access]",
-            "Provides [1] [Station Access] <with [30]% chance>",
-            "Provides [1] [Station Access] <with [10]% chance>",*/
             "Consumes [1] [Abandoned Metro Station]"
         ],
         "civilopediaText":[
@@ -485,24 +451,17 @@
     {
         "name":"Metro Station X",
         "cost":100,
-        "cityHealth":5,
+        "cityHealth":15,
         "cityStrength":2,
         "uniques":[
             "Underground",
-            "Never destroyed when the city is captured",
             "Only available <in cities with a [Metro Station IX]>",
             "Only available <with [Abandoned Metro Station]>",
+            "Destroyed when the city is captured",
             "[+10]% Unhappiness from [Population] [in this city]",
             "[+30]% Culture cost of natural border growth [in this city]",
             "[+30]% Gold cost of acquiring tiles [in this city]",
             "Provides [2] [Underground Slot]",
-            /*"Provides [1] [Underground Slot] <with [20]% chance>",
-            "Provides [1] [Underground Slot] <with [5]% chance>",
-            "Provides [1] [Flooded Area] <with [10]% chance>",
-            "Only available <with [Station Access]>",
-            "Provides [1] [Station Access]",
-            "Provides [1] [Station Access] <with [30]% chance>",
-            "Provides [1] [Station Access] <with [10]% chance>",*/
             "Consumes [1] [Abandoned Metro Station]"
         ],
         "civilopediaText":[
