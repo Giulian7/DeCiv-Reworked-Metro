@@ -19,16 +19,10 @@
             "Never destroyed when the city is captured",
             "Provides [1] [Weapons]",
             "Free [Gate Guard] appears",
+            "Provides [10] [Abandoned Metro Station]<in this city><in [non-[Abandoned Metro Station]] tiles>",
+            "Provides [5] [Abandoned Metro Station]<in this city><in [Abandoned Metro Station] tiles>",
             "Gain a free [Underground Town] [in this city]",
             "Gain a free [Metro Deposit] [in this city]"
-        ]
-    },
-    {
-        "name":"Upper Town",
-        "uniqueTo": "The Confederacy",
-        "uniques":[
-            "Unbuildable",
-            "Automatically built in all cities where it is buildable"
         ]
     },
     {
@@ -36,16 +30,15 @@
         "uniqueTo": "The Confederacy",
         "cityHealth": 15,
         "requiredNearbyImprovedResources":[
-            "Underground"
+            "Abandoned Metro Station"
         ],
         "uniques": [
-            "Unbuildable",
             "Unsellable",
+            "Unbuildable",
             "Automatically built in all cities where it is buildable",
             "Comment [Unlocks Underground Buildings]",
             "Never destroyed when the city is captured",
             "[+5]% Production when constructing [Underground] buildings [in this city]",
-            "Provides [10] [Abandoned Metro Station]<in this city>",
             "Gain a free [Metro Station I] [in this city]"
         ], 
         "civilopediaText": [
@@ -54,11 +47,21 @@
             }
         ]
     },
+    {
+        "name":"Upper Town",
+        "uniqueTo": "The Confederacy",
+        "cost": 5,
+        "uniques":[
+            "Unavailable <before turn number [120]><with [Abandoned Metro Station]>",
+            "Automatically built in all cities where it is buildable",
+            "Free [Settler] appears<without [Abandoned Metro Station]>"
+        ]
+    },
     // Underground buildings
     {
         "name": "Metro Deposit",
         "cost": 20,
-        "specialistSlots":{"Worker":2},
+        "specialistSlots":{"Engineer":1},
         "uniques":[
             "Underground",
             "Consumes [1] [Underground Slot]",
@@ -70,7 +73,7 @@
         "name": "Power Room",
         "uniqueTo":"The Confederacy",
         "cost": 70,
-        "specialistSlots": {"Worker":1,"Engineer":2},
+        "specialistSlots": {"Engineer":2},
         "production":1,
         "uniques":[
             "Underground",
@@ -89,7 +92,7 @@
         "name": "Power Station",
         "uniqueTo":"The Confederacy",
         "cost":100,
-        "specialistSlots":{"Worker":2,"Engineer":3},
+        "specialistSlots":{"Engineer":4},
         "replaces":"Power Room",
         "production":1,
         "uniques":[
@@ -109,7 +112,7 @@
         "name": "Scavenger's Hideout",
         "uniqueTo":"The Confederacy",
         "cost": 70,
-        "specialistSlots":{"Worker":1},
+        "specialistSlots":{"Engineer":1},
         "uniques":[
             "Underground",
             "Consumes [1] [Underground Slot]",
@@ -140,6 +143,7 @@
         "specialistSlots": { "Farmer": 2 },
         "uniques": [
             "Underground",
+            "Only available <in cities with a [Underground Town]>",
             "Consumes [1] [Underground Slot]",
             "Provides [1] [Fungus]",
             "Provides [1] [Hogs]"
@@ -149,13 +153,14 @@
     {
         "name": "Underground Plantation",
         "cost":70,
-        "specialistSlots": { "Farmer": 2, "Botanist": 1},
+        "specialistSlots": { "Farmer": 3},
         "food": 1,
         "uniques":[
             "Underground",
+            "Only available <in cities with a [Underground Town]>",
             "Consumes [2] [Underground Slot]",
             "Provides [3] [Fungus]",
-            "Provides [1] [Fungus]"
+            "Provides [1] [Fungus]<after discovering [Hydroponics]>"
         ],
         "requiredTech":"Botany",
         "hurryCostModifier": 25
@@ -166,14 +171,14 @@
         "cost": 50,
         "culture":1,
         "food":1,
-        "specialistSlots": {"Botanist": 1},
+        "specialistSlots": {"Farmer": 1},
         "uniques": [
             "Underground",
             "Consumes [1] [Underground Slot]",
             "Consumes [1] [Fungus]",
             "Provides [1] [Tea Leaves]",
             "Provides [1] [Tea Leaves]<with [Power]>",
-            "Only available <in cities with a [Underground Farm]>"
+            "Only available <in cities with a [Underground Town]>"
         ],
         "maintenance": 1,
         "hurryCostModifier": 25,
@@ -193,10 +198,10 @@
             "Underground",
             "Consumes [1] [Underground Slot]",
             "Only available <in cities with a [Town Hall]>",
+            "Only available <if [Search for Survivors] is constructed>",
             "[+1 Culture] per [4] population [in this city]",
             "[-10]% Unhappiness from [Population] [in this city]",
             "[-20]% Culture cost of natural border growth [in this city]",
-            "Only available <if [Search for Survivors] is constructed>",
             "Destroyed when the city is captured"
         ],
         "maintenance":2
@@ -256,7 +261,7 @@
             "Underground",
             "Unsellable",
             "Consumes [1] [Abandoned Metro Station]",
-            "Provides [2] [Underground Slot]"
+            "Provides [2] [Underground Slot]<in this city>"
         ],
         "civilopediaText":[
             {
@@ -278,7 +283,7 @@
             "[+5]% Unhappiness from [Population] [in this city]",
             "[+30]% Culture cost of natural border growth [in this city]",
             "[+30]% Gold cost of acquiring tiles [in this city]",
-            "Provides [2] [Underground Slot]",
+            "Provides [2] [Underground Slot]<in this city>",
             "Consumes [1] [Abandoned Metro Station]"
         ],
         "civilopediaText":[
@@ -301,7 +306,7 @@
             "[+10]% Unhappiness from [Population] [in this city]",
             "[+30]% Culture cost of natural border growth [in this city]",
             "[+30]% Gold cost of acquiring tiles [in this city]",
-            "Provides [2] [Underground Slot]",
+            "Provides [2] [Underground Slot]<in this city>",
             "Consumes [1] [Abandoned Metro Station]"
         ],
         "civilopediaText":[
@@ -324,7 +329,7 @@
             "[+10]% Unhappiness from [Population] [in this city]",
             "[+30]% Culture cost of natural border growth [in this city]",
             "[+30]% Gold cost of acquiring tiles [in this city]",
-            "Provides [2] [Underground Slot]",
+            "Provides [2] [Underground Slot]<in this city>",
             "Consumes [1] [Abandoned Metro Station]"
         ],
         "civilopediaText":[
@@ -347,7 +352,7 @@
             "[+10]% Unhappiness from [Population] [in this city]",
             "[+30]% Culture cost of natural border growth [in this city]",
             "[+30]% Gold cost of acquiring tiles [in this city]",
-            "Provides [2] [Underground Slot]",
+            "Provides [2] [Underground Slot]<in this city>",
             "Consumes [1] [Abandoned Metro Station]"
         ],
         "civilopediaText":[
@@ -370,7 +375,7 @@
             "[+10]% Unhappiness from [Population] [in this city]",
             "[+30]% Culture cost of natural border growth [in this city]",
             "[+30]% Gold cost of acquiring tiles [in this city]",
-            "Provides [2] [Underground Slot]",
+            "Provides [2] [Underground Slot]<in this city>",
             "Consumes [1] [Abandoned Metro Station]"
         ],
         "civilopediaText":[
@@ -393,7 +398,7 @@
             "[+10]% Unhappiness from [Population] [in this city]",
             "[+30]% Culture cost of natural border growth [in this city]",
             "[+30]% Gold cost of acquiring tiles [in this city]",
-            "Provides [2] [Underground Slot]",
+            "Provides [2] [Underground Slot]<in this city>",
             "Consumes [1] [Abandoned Metro Station]"
         ],
         "civilopediaText":[
@@ -416,7 +421,7 @@
             "[+10]% Unhappiness from [Population] [in this city]",
             "[+30]% Culture cost of natural border growth [in this city]",
             "[+30]% Gold cost of acquiring tiles [in this city]",
-            "Provides [2] [Underground Slot]",
+            "Provides [2] [Underground Slot]<in this city>",
             "Consumes [1] [Abandoned Metro Station]"
         ],
         "civilopediaText":[
@@ -439,7 +444,7 @@
             "[+10]% Unhappiness from [Population] [in this city]",
             "[+30]% Culture cost of natural border growth [in this city]",
             "[+30]% Gold cost of acquiring tiles [in this city]",
-            "Provides [2] [Underground Slot]",
+            "Provides [2] [Underground Slot]<in this city>",
             "Consumes [1] [Abandoned Metro Station]"
         ],
         "civilopediaText":[
@@ -461,7 +466,7 @@
             "[+10]% Unhappiness from [Population] [in this city]",
             "[+30]% Culture cost of natural border growth [in this city]",
             "[+30]% Gold cost of acquiring tiles [in this city]",
-            "Provides [2] [Underground Slot]",
+            "Provides [2] [Underground Slot]<in this city>",
             "Consumes [1] [Abandoned Metro Station]"
         ],
         "civilopediaText":[

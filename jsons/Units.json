@@ -30,5 +30,15 @@
 		"uniques":[
 			"Personnel"
 		]
+	},
+	{
+		"name":"Settler",
+		"uniqueTo":"The Confederacy",
+		"unitType":"Scrapper",
+		"movement":1,
+		"cost":20,
+		"uniques":[
+			"Can build [All] improvements at a [-33]% rate"
+		]
 	}
 ] 

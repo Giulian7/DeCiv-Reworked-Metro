@@ -1,36 +1,33 @@
 [
     {
-        "name": "Underground",
-        "resourceType":"Bonus",
+        "name": "Abandoned Metro Station",
+        "resourceType":"Strategic",
+        "improvemet":"City center",
+        "production":1,
+        "majorDepositAmount":{
+            "sparse":4,
+            "default":8,
+            "abundant":10
+        },
+        "minorDepositAmount":{
+            "sparse":3,
+            "default":5,
+            "abundant":6
+        },
         "terrainsCanBeFoundOn":[
             "Jungle",
             "Forest"
         ],
-        "production":1,
-        "improvedBy":["City center"],
-        "improvementStats": { "production": 1 , "food": 1},
         "uniques":[
-            "City-level resource"
+            "City-level resource",
+            "Generated with weight [75]<in [Jungle] Regions>",
+            "Generated with weight [50]<in [Forest] Regions>",
+            "Generated on every [9] tiles <in [Jungle] tiles>",
+            "Generated on every [27] tiles <in [Forest] tiles>"
         ]
     },
     {
         "name":"Underground Slot",
-        "resourceType":"Bonus",
-        "uniques":[
-            "City-level resource",
-            "Doesn't generate naturally"
-        ]
-    },
-    {
-        "name": "Abandoned Metro Station",
-        "resourceType":"Bonus",
-        "uniques":[
-            "City-level resource",
-            "Doesn't generate naturally"
-        ]
-    },
-    {
-        "name":"Station Access",
         "resourceType":"Bonus",
         "uniques":[
             "City-level resource",
