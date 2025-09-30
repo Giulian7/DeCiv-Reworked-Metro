@@ -1,0 +1,16 @@
+[
+	{
+        "name":"Worker",
+        "production":1.5,
+        "greatPersonPoints":{"Great Engineer":2},
+        "color":[105, 5, 0]
+    },
+    {
+        "name":"Botanist",
+        "food":1,
+        "gold":1,
+        "greatPersonPoints":{"Great Farmer":2},
+        "color":[0,215,0]
+    }
+]
+

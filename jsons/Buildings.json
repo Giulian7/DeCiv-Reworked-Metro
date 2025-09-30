@@ -29,12 +29,12 @@
         "name": "Underground Town",
         "uniqueTo": "The Confederacy",
         "cityHealth": 15,
+        "cost":100,
         "requiredNearbyImprovedResources":[
             "Abandoned Metro Station"
         ],
         "uniques": [
             "Unsellable",
-            "Unbuildable",
             "Automatically built in all cities where it is buildable",
             "Comment [Unlocks Underground Buildings]",
             "Never destroyed when the city is captured",
@@ -54,14 +54,28 @@
         "uniques":[
             "Unavailable <before turn number [120]><with [Abandoned Metro Station]>",
             "Automatically built in all cities where it is buildable",
-            "Free [Settler] appears<without [Abandoned Metro Station]>"
+            "Gain a free [Surface Operation Hub] [in this city]",
+            "Free [Surface Worker] appears"
+        ]
+    },
+    {
+        "name":"Surface Operation Hub",
+        "uniqueTo":"The Confederacy",
+        "cost":70,
+        "specialistSlots":{"Worker":1},
+        "uniques":[
+            "Underground",
+            "[+20]% Production when constructing [Scrapper] units [in this city]",
+            "[+20]% Production when constructing [Scout] units [in this city]",
+            "[+5]% Production when constructing [Land] units [in this city]",
+            "[-30]% Culture cost of natural border growth [in this city]"
         ]
     },
     // Underground buildings
     {
         "name": "Metro Deposit",
         "cost": 20,
-        "specialistSlots":{"Engineer":1},
+        "specialistSlots":{"Worker":2},
         "uniques":[
             "Underground",
             "Consumes [1] [Underground Slot]",
@@ -107,19 +121,6 @@
         "maintenance":2,
         "requiredTech":"Steam Power",
         "hurryCostModifier":25
-    },
-    {
-        "name": "Scavenger's Hideout",
-        "uniqueTo":"The Confederacy",
-        "cost": 70,
-        "specialistSlots":{"Engineer":1},
-        "uniques":[
-            "Underground",
-            "Consumes [1] [Underground Slot]",
-            "[+20]% Production when constructing [Scout] units [in this city]",
-            "[+5]% Production when constructing [Land] units [in this city]",
-            "[-30]% Culture cost of natural border growth [in this city]"
-        ]
     },
     {
         "name": "Underground Market",

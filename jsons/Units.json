@@ -2,7 +2,7 @@
 	{
 		"name":"Gate Guard",
 		"uniqueTo":"The Confederacy",
-		"replaces": "Militia",
+		"replaces":"Militia",
 		"unitType":"Scrapper",
 		"movement":2,
 		"cost":45,
@@ -28,17 +28,40 @@
 			"Reconnaissance I"
 		],
 		"uniques":[
-			"Personnel"
+			"Personnel",
+			"Can build [Scavenging] improvements on tiles"
 		]
 	},
 	{
-		"name":"Settler",
+		"name":"Surface Worker",
 		"uniqueTo":"The Confederacy",
 		"unitType":"Scrapper",
 		"movement":1,
 		"cost":20,
 		"uniques":[
-			"Can build [All] improvements at a [-33]% rate"
+			"Can only be built <in cities with a [Surface Operation Hub]>",
+			"Can build [Salvage site] improvements on tiles",
+			"Can build [Water pump] improvements on tiles",
+			"Can build [Road] improvements on tiles",
+			"[+20]% construction time for [all] improvements",
+		]
+	},
+	{
+		"name":"Trapper",
+		"uniqueTo":"The Confederacy",
+		"unitType":"Scout",
+		"strength":5,
+		"movement":2,
+		"cost":20,
+		"uniques":[
+			"Can only be built <in cities with a [Surface Operation Hub]>",
+			"Can instantly construct a [Camp] improvement<by consuming this unit>",
+			"Can build [Road] improvements on tiles",
+			"Can build [Scavenging] improvements on tiles",
+			"[+200]% Strength<vs [Swarm] units>",
+			"[+200]% Strength<vs [Wild Dog] units>",
+			//"When defeating a [Wild Dog] unit, earn [5] Gold and recruit it<with [33]% chance>",
+			"Invisible to non-adjacent units"
 		]
 	}
 ] 
