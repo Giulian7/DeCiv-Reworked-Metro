@@ -1,82 +1,96 @@
 
 game.png
-size: 2048, 2048
+size: 1024, 512
 format: RGBA8888
 filter: MipMapLinearLinear, MipMapLinearLinear
 repeat: none
 BuildingIcons/City Congress
   rotate: false
-  xy: 4, 112
+  xy: 162, 63
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 BuildingIcons/Metro Deposit
   rotate: false
-  xy: 1212, 1474
+  xy: 444, 375
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
+BuildingIcons/Metro Station
+  rotate: false
+  xy: 552, 375
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
+BuildingIcons/Power Room
+  rotate: false
+  xy: 308, 315
+  size: 128, 160
+  orig: 128, 160
+  offset: 0, 0
+  index: -1
 BuildingIcons/The Old Underground
   rotate: false
-  xy: 308, 316
+  xy: 552, 267
   size: 83, 100
   orig: 83, 100
   offset: 0, 0
   index: -1
+BuildingIcons/Underground Plantation
+  rotate: false
+  xy: 876, 375
+  size: 100, 100
+  orig: 100, 100
+  offset: 0, 0
+  index: -1
 BuildingIcons/Underground Town
   rotate: false
-  xy: 1212, 1582
+  xy: 4, 13
   size: 150, 150
   orig: 150, 150
   offset: 0, 0
   index: -1
 BuildingIcons/War Meeting Room
   rotate: false
-  xy: 4, 532
-  size: 1200, 1200
-  orig: 1200, 1200
+  xy: 444, 267
+  size: 100, 100
+  orig: 100, 100
   offset: 0, 0
   index: -1
-ImprovementIcons/Metro Gate-The Confederacy
+ImprovementIcons/City center-The Confederacy
   rotate: false
-  xy: 416, 523
+  xy: 4, 4
   size: 1, 1
   orig: 1, 1
   offset: 0, 0
   index: -1
 NationIcons/The Confederacy
   rotate: false
-  xy: 4, 220
+  xy: 4, 171
   size: 296, 304
   orig: 296, 304
   offset: 0, 0
   index: -1
-ResourceIcons/Station Access
-  rotate: false
-  xy: 1370, 1632
-  size: 100, 100
-  orig: 100, 100
-  offset: 0, 0
-  index: -1
 ResourceIcons/Underground
   rotate: false
-  xy: 112, 112
+  xy: 768, 375
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 UnitIcons/Gate Guard
   rotate: false
-  xy: 308, 424
+  xy: 308, 207
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
   index: -1
 UnitIcons/Trail Blazer
   rotate: false
-  xy: 4, 4
+  xy: 660, 375
   size: 100, 100
   orig: 100, 100
   offset: 0, 0
